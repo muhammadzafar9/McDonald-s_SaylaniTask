@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+/* body  {
+    font-family: 'Arial' , sans-serif;
+} */
+nav {
+    background: #000;
+
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 800px){
+    nav .mainMenu{
+        opacity: 0.8;
+        color: #fcca32;
+    }
+}
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 10px;
+    
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    /* font-size: 1.5rem; */
+    margin: 0 20px -5px 10px;
+    /* padding: 0 0 0 20px; */
+}
+nav .mainMenu li a:hover {
+    background:#fcca32; 
+}
+/* hamburger menu (bars)  */
+nav .openMenu {
+    font-size: 1.5rem;
+    margin: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+/* close icon */
+nav .mainMenu .closeMenu , .icons i {
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+    margin: -10px 5px 0 5px;
+}
+
+/* mcdolnads logo */
+
+nav .logo {
+    
+    margin-top: 15px;
+    margin-bottom: 10px;
+    
+    padding-left: 30px;
+    font-family: 'Poppins', sans-serif;;
+    cursor: pointer;
+}
+
+/* media query  */
+/* mobile and tablet screen navigation bar */
+@media(max-width: 800px){
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+       
+      
+
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: #fcca32;   
+        font-size: 1.6rem;
+    }
+    /* .icons i {
+        display: inline-block;
+        padding: 12px;
+    } */
+}
+
+
+/* her-img section */
+
+/* heroimage backgorung */
+
+.hero-image{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: url(https://mcdonalds.com.pk/wp-content/uploads/2018/04/banner-restaurant-jobs.jpg) no-repeat center;
+    background-size: cover;
+    
+}
+
+/* hero-image macdoland */
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* overflow: hidden; */
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container .h1  span  {
+    font-size: 48px;
+    letter-spacing: 0.1em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.container h1 span{
+    border: 5px solid #fcca32; 
+    padding: 6px 14px;
+    display: inline-block;
+    /* text-transform: lowercase; */
+    
+}
+
+.description{
+    margin: 20px;
+    display: block;
+    font-size: 20px;
+    text-shadow: 0 0 10px black;
+}
+/* media query for fonts and heading */
+@media screen and (max-width:600px){
+    .description{
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* color: red; */
+    }
+    .container h1 span{
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+        
+    }
+}
+
+/* hero img button  */
+.btn{
+    color: black;
+    padding: 10px 24px;
+    font-size: 20px;
+    text-decoration: none;
+    background: #f1f1f1;
+    /* border-radius: 8px;     */
+    transition: 0.3s all;
+  }
+  .btn:hover{
+      opacity: 0.8;
+  }
+
+  /* our servies section */
+
+  .our-services .conatiner h1 span{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-top: 30px;
+      padding: auto;
+  }
+
+  .horizantoal{
+      width: 70px;
+      justify-content: center;
+      margin: auto;
+      
+      border: 2px solid  #fcca32;
+  
+     
+     
+     
+  }
+
+  /* cards section */
+
+  .container-1 {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .heading {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+  }
+  
+  .card {
+    width: 20%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    transition: 0.3s;
+  }
+  
+  .card-header {
+    text-align: center;
+    padding: 50px 10px;
+    background: linear-gradient(to right, #2b2c2d, #2b2c2d);
+    color: #fff;
+  }
+  
+  .card-body {
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .card-body .btn {
+    display: block;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    /* background: linear-gradient(to right, #fecc32, #fecc32); */
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 10px 5px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25); */
+    background-color: #fcca32;
+    color: #fff;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .card {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .container {
+      width: 100%;
+    }
+  
+    .heading {
+      padding: 20px;
+      font-size: 20px;
+    }
+  
+    .card {
+      width: 80%;
+    }
+  }
+
+.container-fluid h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  /*                         our gallery                  */
+
+
+ 
+  /*                    our gallery close here           */
+
+
+
+
+
+ /* our team membersa */
+
+ .team {
+    padding: 30px 0;
+}
+
+.team h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+}
+
+.team h2 span {
+    color: #fecc32;
+}
+
+
+
+.team p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 60px;
+    padding: 0;
+}
+
+.team .box {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all .5s ease-in-out;
+}
+
+.team .box .image {
+    position: relative;
+    height: 100%;
+}
+
+.team .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9100 1%,#56dc1 100%);
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 15;
+}
+
+.team .box .image .social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    z-index: 20;
+    text-decoration: none;
+    opacity: 0;
+    margin-top: 100px;
+    padding: 8px 15px;
+    background: #ffffff;
+    border-radius: 35px;
+    transition: all 0.5s ease-in-out;
+}
+
+.team .box .image .social-icons i {
+    font-size: 18px;
+    padding: 0 7px;
+    color: #ff9100;
+}
+
+.team .box:hover .overlay {
+    opacity: 0.85;
+}
+
+.team .box:hover .social-icons {
+    margin-top: 0;
+    opacity: 1;
+}
+
+.team .box h3 {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.team .box h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: #999999;
+    font-weight: 400;
+    margin-top: 5px;
+    padding-bottom: 25px;
+}
+
+.team .box:hover {
+    transform: translateY(-15px);
+}
+
+
+
+/* footer */
+
+/* FOOTER */
+.footer {
+	width: 100%;
+	background: #1f1f1f;
+	display: block;
+ }
+
+ .inner-footer {
+	 width: 95%;
+	 margin: auto;
+	 padding: 30px 10px;
+	 display: flex;
+	 flex-wrap: wrap;
+	 box-sizing: border-box;
+	 justify-content: center;
+ }
+
+.footer-items {
+	width: 25%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.footer-items p {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 25px;
+	color: #fff;
+}
+
+.footer-items h1 {
+	color: #fff;
+}
+
+.border1 {
+	height: 3px;
+	width: 40px;
+	background: #ff9800;
+	color: #ff9800;
+	background-color: #ff9800;
+	border: 0px;
+}
+
+ul {
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;	
+ }
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	transition: 0.3s;
+}
+
+ul a:hover {
+	color: #ff9800;
+}
+
+ul li {
+	margin: 10px 0;
+	height: 25px;
+}
+
+li i {
+	margin-right: 20px;
+}
+
+.social-media {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+.social-media a {
+	text-decoration: none;
+}
+
+.social-media i {
+	height: 25px;
+	width: 25px;
+	margin: 20px 10px;
+	padding: 4px;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.social-media i:hover {
+	transform: scale(1.5);
+}
+
+.footer-bottom {
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
+}
+
+/* footer close */
+
+/* gallery images */
+
+
+
+
+
+
+/* end carousal */
+
+/* back to top button */
+
+.gotopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #fcca32;
+    bottom: 30px;
+    right: 0px;
+  
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    border-radius: 50px;
+    z-index: 1;
+  }
+
+.gotopbtn:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+  /* close go-to-top button */
+
+  #back-to-top { visibility: hidden; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
